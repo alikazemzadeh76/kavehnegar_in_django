@@ -39,7 +39,7 @@ class SendRequestView(APIView):
 
             request.session['token'] = token
 
-            return Response(token, status=200)  # تبدیل به فرمت JSON
+            return Response(token, status=200)
         except requests.exceptions.RequestException as e:
             return Response({"error": "درخواست پرداخت با مشکل مواجه شد."}, status=500)
 
